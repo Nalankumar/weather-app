@@ -4,10 +4,10 @@
 The Weather App provides real-time weather updates for any location. It displays key data, including temperature, humidity, wind speed, and atmospheric pressure, in an intuitive interface. With accurate forecasts and easy navigation, users can stay informed about current conditions and plan their activities effectively, making it a reliable daily companion.
 
 ### Table of contents
--[Tech Stack](#tech-stack)
--[Installation](#installation)
--[Contributing](#contributing)
--[License](#license)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [License](#license)
 
 ### Tech Stack
 [![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite)](https://skillicons.dev)
