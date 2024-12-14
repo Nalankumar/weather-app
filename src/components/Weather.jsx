@@ -62,7 +62,7 @@ export default function Weather(){
 			<div className="flex justify-between">
 				<div className="flex flex-col items-center p-4 md:p-8">
 						<img src={Rainy} className="h-12 w-12" alt="humidity" />
-						<span>{humidity}</span>
+						<span>{humidity} %</span>
 						<p className="text-xs">Humidity</p>
 					</div>
 					<div className="flex flex-col items-center p-4 md:p-8">
