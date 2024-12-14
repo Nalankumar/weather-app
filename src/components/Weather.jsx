@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Day from './../assets/weather_svg/static/day.svg'
 import Rainy from './../assets/weather_svg/static/rainy-1.svg'
 export default function Weather(){
-	const url = "http://api.weatherapi.com/v1"
+	const url = "https://api.weatherapi.com/v1"
 	const [weather,setWeather] = useState({})
 	const [city, setCity] = useState("chennai");
 	const [temp, setTemp] = useState(0);
