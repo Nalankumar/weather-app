@@ -1,11 +1,11 @@
-import Weather from './Weather.jsx'
+import Weather from './components/Weather.jsx'
 function App() {
   return (
-    <>
-      <div className="h-full w-full flex justify-center items-center">
-        <Weather />
-      </div>
-    </>
+    
+    <div className="h-screen w-screen flex justify-center items-center">
+      <Weather />
+    </div>
+  
   )
 }
 
