@@ -2,7 +2,7 @@ import {useState} from 'react'
 import Day from './../assets/weather_svg/static/day.svg'
 import Rainy from './../assets/weather_svg/static/rainy-1.svg'
 export default function Weather(){
-	const url = "http://api.weatherapi.com/v1"
+	const url = "https://api.weatherapi.com/v1"
 	const [weather,setWeather] = useState({})
 	const [city, setCity] = useState("chennai");
 	const [temp, setTemp] = useState(0);
@@ -14,14 +14,12 @@ export default function Weather(){
 		const data = await fetch(`${url}/current.json?key=${import.meta.env.VITE_API_KEY}&q=${city}`)
 		.then((res)=>{ return res.json()})
 		.then(data => {
-			console.log(data);
 			setWeather(data);
 			setTemp(data.current.temp_c);
 			setHumidity(data.current.humidity);
 			setPressure(data.current.pressure_in);
 			setWindSpeed(data.current.wind_kph)
 			setStatus(data.current.condition.text);
-			console.log(status);
 		});
 	}
 
@@ -30,7 +28,7 @@ export default function Weather(){
 	},[])
 
 	return(
-		<div className="flex flex-col items-center justify-evenly rounded-md h-[50vh] w-[90vw] md:h-[70vh] md:w-[40vw] bg-slate-300/75">
+		<div className="flex flex-col items-center justify-evenly rounded-md h-[60vh] w-[90vw] md:h-[70vh] md:w-[40vw] bg-slate-300/75">
 			<label
 			  htmlFor="city"
 			  className="relative block overflow-hidden border-b border-gray-200 bg-transparent pt-3 focus-within:border-blue-600"
@@ -53,29 +51,29 @@ export default function Weather(){
 			    City
 			  </span>
 			</label>
-			<div className="w-10 h-10 flex flex-col justify-center items-center">
-				<p className="text-xl">{city}</p>
-				<p>{status}</p>
+			<div className="w-full flex flex-col justify-center items-center">
+				<p className="text-xl font-bold">{city}</p>
+				<p className="font-semibold">{status}</p>
 				<img src={Day} className="" alt="day" />
 				<span>{temp}c</span>
 				
 				
 			</div>
 			<div className="flex justify-between">
-				<div className="flex flex-col items-center p-10">
+				<div className="flex flex-col items-center p-4 md:p-8">
 						<img src={Rainy} className="h-12 w-12" alt="humidity" />
 						<span>{humidity}</span>
-						<p>Humidity</p>
+						<p className="text-xs">Humidity</p>
 					</div>
-					<div className="flex flex-col items-center p-10">
+					<div className="flex flex-col items-center p-4 md:p-8">
 						<img src={Rainy} className="h-12 w-12" alt="pressure" />
 						<span>{pressure} in</span>
-						<p>Pressure</p>
+						<p className="text-xs">Pressure</p>
 					</div>
-					<div className="flex flex-col items-center p-10">
+					<div className="flex flex-col items-center p-4 md:p-8">
 						<img src={Rainy} className="h-12 w-12" alt="wind speed" />
 						<span>{windSpeed} kph</span>
-						<p>Wind Speed</p>
+						<p className="text-xs">Wind Speed</p>
 					</div>
 			</div>
 			
