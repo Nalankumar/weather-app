@@ -10,7 +10,9 @@ The Weather App provides real-time weather updates for any location. It displays
 - [License](#license)
 
 ### Tech Stack
-[![My Skills](https://skillicons.dev/icons?i=react,tailwind,vite)](https://skillicons.dev)
+- React
+- TailwindCSS
+- Vite
 
 ### Installation
 Here’s a step-by-step guide to installing and running a React program that fetches data from an API and is hosted on GitHub:
